@@ -5,16 +5,18 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start:api": "npx ts-node --esm src/api/server.ts",
-    "start:worker": "npx ts-node --esm src/workers/notificationWorker.ts"
+    "start:api": "npx ts-node --esm --experimental-specifier-resolution=node src/api/server.ts",
+    "start:worker": "npx ts-node --esm --experimental-specifier-resolution=node src/workers/notificationWorker.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ash10000000000/The-Event-Driven-Notification-Engine.git"
   },
-  "author": "",
+  "keywords": [],
+  "author": "Astitva",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.13.6",
     "bullmq": "^5.70.1",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",

@@ -8,8 +8,8 @@ const app = express();
 app.use(express.json());
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/notif_db')
-    .then(() => console.log('✅ Connected to MongoDB'))
-    .catch(err => console.error('❌ MongoDB Connection Error:', err));
+    .then(() => console.log(' Connected to MongoDB'))
+    .catch(err => console.error(' MongoDB Connection Error:', err));
 app.post('/send', async (req, res) => {
     try {
         const { type, recipient, body } = req.body;
@@ -31,5 +31,5 @@ app.get('/status/:jobId', async (req, res) => {
         return res.status(404).json({ error: 'Not found' });
     res.json(notif);
 });
-app.listen(3000, () => console.log('🚀 API running on port 3000'));
+app.listen(3000, () => console.log('API running on port 3000'));
 //# sourceMappingURL=server.js.map
