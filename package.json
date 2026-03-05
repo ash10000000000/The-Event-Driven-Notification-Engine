@@ -1,0 +1,32 @@
+{
+  "name": "the-event-driven-notification-engine",
+  "version": "1.0.0",
+  "description": "The Event-Driven Notification Engine.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start:api": "npx ts-node --esm src/api/server.ts",
+    "start:worker": "npx ts-node --esm src/workers/notificationWorker.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ash10000000000/The-Event-Driven-Notification-Engine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bullmq": "^5.70.1",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "ioredis": "^5.10.0",
+    "mongoose": "^9.2.4",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.3",
+    "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
